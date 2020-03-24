@@ -1,0 +1,27 @@
+html
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='description', content='Some description')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+	body
+
+		div.container
+			br 
+			form(action='' method='POST')
+				.form-group
+					label(for='post_title') Student_id
+					input#post_title.form-control(type='text' name='student_id' placeholder='student_id' required='' value=student.student_id)
+					label(for='post_content') Name
+					input#post_content.form-control(type='text' name='name' placeholder='Name' required='' value=student.name)
+					label(for='author_name') Year
+					input#author_name.form-control(type='number' name='year' placeholder='Year' required='' value=student.year)
+					label(for='author_name') Email
+					input#author_name.form-control(type='text' name='email' placeholder='Email' required='' value=student.email)
+					br
+					input.btn.btn-success(type='submit' value='UPDATE')
+
+					a.m-3.btn.btn-info(href='/') Back
+
+

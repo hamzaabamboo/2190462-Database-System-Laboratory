@@ -1,0 +1,35 @@
+html
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='description', content='Some description')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+	body
+		div.container
+			h3 Add New Enrollment
+			br 
+			form(action='' method='POST')
+				.form-group
+					label(for='post_title') Student
+					select#post_title.form-control(name='student_id' required='')
+						for s in students
+							option(value=s.student_id)=s.student_id + " : " + s.name
+					label(for='course') Course
+					select#course.form-control(name='cid' required='')
+						for c in courses
+							option(value=c.cid)=c.cid + " : " + c.title
+					label(for='section') Section
+					input#section.form-control(type='number' name='sect_id' placeholder='Section' required='')
+					label(for='semester') Semester
+					input#semester.form-control(type='text' name='semester' placeholder='Semester' required='')
+					label(for='year') Year
+					input#year.form-control(type='number' name='year' placeholder='Year' required='')
+					label(for='grade') Grade
+					input#grade.form-control(type='text' name='grade' placeholder='Grade' required='')
+					br
+					input.btn.btn-success(type='submit' value='Add')
+				
+					a.m-3.btn.btn-info(href='/takes') Back
+
+

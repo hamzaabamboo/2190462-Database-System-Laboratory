@@ -4,7 +4,7 @@ Tanyawat Vittayapalotai 6031763021
 
 ## Question 4:
 
-Edit files server.js, index.pug, edit.pug,and add.pug to show, search, insert, edit,and delete the datarecordsin the Takes table (Student ID, course id, sect_id, semester, year, and grade).Complete tasks 4.1 – 4.5, then capture all screenshots and submit them through myCourseVille.
+Edit files server.js, index.pug, edit.pug,and add.pug to show, search, insert, edit,and delete the data records in the Takes table (Student ID, course id, sect_id, semester, year, and grade).Complete tasks 4.1 – 4.5, then capture all screenshots and submit them through myCourseVille.
 
 ### Question 4.1 List:
 

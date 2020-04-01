@@ -73,6 +73,7 @@ Expected result of fn_currency must be 2 USD
 ### SQL
 
 ```sql
+DELIMETER $$
 CREATE FUNCTION fn_currency(
     input_number DECIMAL(65),
     exchange_rate DECIMAL(65),
@@ -117,6 +118,7 @@ SELECT *, fn_currency(salary,35,"USD") from Professor
 Update salary of all professors who earns `salary` less than 30,000 up to 10% and update `credit_limit` of insurance up to 400 % of new salary and also insert log into `system_log` table that stores the old salary, new salary, old credit limit and new credit limit. Finally, the data stored procedure has to print the name, old salary, new salary and credit limit of all professor information that are updated. (procedure name: Proc_cal_professor_upvel)
 
 ```sql
+DELIMETER $$
 CREATE PROCEDURE Proc_cal_professor_upvel()
 DETERMINISTIC
 BEGIN
@@ -156,7 +158,7 @@ FROM TEMP_PROF_OLD o
 INNER JOIN Professor p ON p.pid = o.PID
 INNER JOIN faculty_insurance f on p.pid = f.ref_id;
 # Select values to show
-SELECT o.PID, p.name,
+SELECT o.PID, p.pname,
     o.salary as old_salary,
     p.salary as new_salary,
     o.credit_limit as old_credit_limit,
